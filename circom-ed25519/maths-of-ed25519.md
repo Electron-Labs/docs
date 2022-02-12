@@ -44,7 +44,13 @@ k=2, Q =  P+P
  k=4, Q = 2P + 2P
 \newline
 k=8, Q = 4P + 4P
+\newline
+...
+\newline
+k = 256, Q = 128P + 128P
 $$
+
+Hence, we can calculate `Q` in `log(k)` steps. Since `max(k) < 2^255-19`, we need to perform a max of `log(2^255-19) ~ 255` steps to calculate a scalar multiple.
 
 ### Verifying an ED25519 signature
 
