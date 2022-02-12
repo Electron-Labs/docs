@@ -36,5 +36,5 @@ We have choosen to use base `2^51`.
 
 ### Reasons for choosing Base 2^51
 
-\<work in progress>
+\<add here>
 
