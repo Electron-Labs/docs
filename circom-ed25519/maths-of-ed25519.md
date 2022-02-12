@@ -34,3 +34,15 @@ This formula is derived by finding a point R that lies both on the curve and on 
 
 The above equation can be re-arranged to a polynomial form (R1CS). Points that satisfy this polynomial will always satisfy the property `P + Q = R`
 
+### Defining Multiplication of a pt on the Curve
+
+Given a point P on the curve, we define another point on the curve Q as the “scalar multiplication” of P and k such that `Q =k*P` where k is a constant under mod p. Scalar multiplication is defined as the repeated addition of pts:-&#x20;
+
+$$
+k=2, Q =  P+P
+\newline
+ k=4, Q = 2P + 2P
+\newline
+k=8, Q = 4P + 4P
+$$
+
