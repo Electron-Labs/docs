@@ -46,3 +46,26 @@ k=2, Q =  P+P
 k=8, Q = 4P + 4P
 $$
 
+### Verifying an ED25519 signature
+
+Let’s see some definitions:-
+
+The ED25519 key-pair consists of:
+
+* Private Key (integer under mod p) : `privKey`
+* Public key (curve point): `pubKey = privKey * B` where `B` is the base pt as defined above
+
+#### Verification Algorithm
+
+The ED22519 signature verification algorithm takes as input a text message `msg` + the signer's ED25519 public key `pubKey` + the ED25519 signature `{R, s}` and produces as output a boolean value (`valid` or `invalid` signature). Here `s` is a scalar, and `R` is a pt on the curve. ED25519 verification works as follows (with minor simplifications):
+
+`EdDSA_signature_verify(msg, pubKey, signature { R, s } ) --> valid / invalid`
+
+1. Calculate `h = SHA512(R + pubKey + msg) mod q`
+2. Calculate `P1 = s * G`
+3. Calculate `P2 = R + h * pubKey`
+4. Return `P1 == P2`
+
+Here `q` is the curve order. `q = 2^252 + 27742317777372353535851937790883648493`
+
+In step one, you must be wondering how can we use `pubKey` as an input to SHA512 as `pubKey` is a curve point (not a scalar). `pubkey` in this step is represented as a "compressed" curve pt i.e only the y-coordinate. In step, 3, `pubkey` is used as a curve point.
