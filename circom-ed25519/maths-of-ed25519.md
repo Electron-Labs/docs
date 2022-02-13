@@ -16,7 +16,9 @@ $$
 
 where `a = -1` and `d = - 121665/121666`
 
-Base Point is defined as `(Bx, By)` where `By = 4/5`
+Base Point is defined as `(Bx, By)` where `By = 4/5`. Here the `/` operator represents the inverse modulo operation wrt `p`. Hence `By = 4*mod_inverse(5,p) => By = 46316835694926478169428394003475163141307993866256225615783033603165251855960`
+
+Substitute `By` in the curve equation to calculate `Bx = 15112221349535400772501151409588531511454012693041857206046113283949847762202`
 
 ### Defining Point Addition&#x20;
 
