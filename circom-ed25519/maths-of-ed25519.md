@@ -77,3 +77,12 @@ The ED22519 signature verification algorithm takes as input a text message `msg`
 Here `q` is the curve order. `q = 2^252 + 27742317777372353535851937790883648493`
 
 In step one, you must be wondering how can we use `pubKey` as an input to SHA512 as `pubKey` is a curve point (not a scalar). `pubkey` in this step is represented as a "compressed" curve pt i.e only the y-coordinate. In step, 3, `pubkey` is used as a curve point.
+
+### References
+
+[https://martin.kleppmann.com/papers/curve25519.pdf](https://martin.kleppmann.com/papers/curve25519.pdf)&#x20;
+
+{% embed url="https://cryptobook.nakov.com/digital-signatures/eddsa-and-ed25519#eddsa-sign" %}
+
+[https://datatracker.ietf.org/doc/html/rfc8032](https://datatracker.ietf.org/doc/html/rfc8032)
+
