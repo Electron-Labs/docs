@@ -70,7 +70,7 @@ The ED22519 signature verification algorithm takes as input a text message `msg`
 `EdDSA_signature_verify(msg, pubKey, signature { R, s } ) --> valid / invalid`
 
 1. Calculate `h = SHA512(R + pubKey + msg) mod q`
-2. Calculate `P1 = s * G`
+2. Calculate `P1 = s * B`
 3. Calculate `P2 = R + h * pubKey`
 4. Return `P1 == P2`
 
