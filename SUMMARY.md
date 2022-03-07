@@ -2,6 +2,7 @@
 
 * [Welcome to Electron Labs](README.md)
 * [ZK for Beginners](zk-for-beginners.md)
+* [Intro to Circom](intro-to-circom.md)
 
 ## Circom ED25519
 
