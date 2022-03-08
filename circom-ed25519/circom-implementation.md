@@ -4,11 +4,39 @@ description: Zk-proof of a single ED25519 signature
 
 # Circom Implementation
 
-We will now discuss how we create a zk-proof of a single ED25519 signature. This section assumes a working knowledge of zk-snarks and circom/snarkJS.
+We will now discuss how we can define the ED25519 maths in the R1CS model, by using Circom. We will then use snarkJS to generate zk-proofs of ED25519 signatures. This section assumes a working knowledge of zk-snarks and Circom/snarkJS.
 
-### Step1: Making ED25519 zk-ready
+### Step1: Defining ED25519 prime field inside the altbn prime field
 
-First, we must represent all the ED25519 operations as polynomials so that they can be represented in R1CS constraint model.
+Both Circom/zk-snarks and ED25519 are defined under a finite field. This means all math operations are performed under modulo a prime number.
+
+Prime Number for ED25519: `p = 2^255 - 19`
+
+Prime Number for Circom/zk-snarks: `altbn_P = 21888242871839275222246405745257275088548364400416034343698204186575808495617`
+
+Note that the prime `p` used by ED25519 is different and greater in value than `altbn_P`. Hence, we must define an approach that allows us to perform ED25519 operations while keeping all numbers within the snark prime field.
+
+One way to solve this problem is to represent all numbers as an array of base2 numbers (binary). This would make sure that no single element exceeds `altbn_P` but the entire array could represent larger numbers. In fact, we can choose any base `b` such that `b < altbn_P`
+
+Max value of any number in ED25519 is `p`and it can be represented in a max of 255 bits. In base`2^51`, we need a max of 5 elements to represent all numbers. The number of constraints is the same when multiplying `1`\*`1` or `2^51`\*`2^51`. Hence, it makes sense to use the largest base possible.
+
+We have chosen to use base `2^51`. (although base`2^85` is even better). Note that `2^51 < altbn_P` which is necessary.
+
+Next, we must define addition, multiplication, and modulus operator in base`2^51` inside circom, so that we can start doing ED25519 maths.
+
+### Step2: Defining adder, multiplier, and modulus in base 2^51
+
+Inputs
+
+a : \[232,232,233,32,3]
+
+b : \[342,313,114,31,113]
+
+\<add here>
+
+### Step3: Making ED25519 Circom-ready
+
+First, we must represent all the ED25519 operations as polynomials so that they can be represented in the R1CS constraint model.
 
 Let's start with point addition. Re-arranging the point addition equation discussed in the previous section, we get:-
 
@@ -20,21 +48,7 @@ $$
 
 Hence, if three points `(x1, y1)`, `(x2, y2)` and `(x3,y3)` satisfy these two polynomials, we can say that the third point is the sum of the first two points.
 
-In our circom implementation, rather than using cartesian coordinates, we use the radix format as defined in the reference implementation (given [here](https://datatracker.ietf.org/doc/html/rfc8032#page-20)). This changes how the polynomials look, but  the core logic is the same. Please see the code [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/point-addition.circom).
-
-### Step2: Defining ED25519 prime field inside the altbn prime field
-
-Circom and zk-snarks define all numbers and operations under modulo of the albn128 prime number, where the prime number is `altbn_P = 21888242871839275222246405745257275088548364400416034343698204186575808495617`
-
-This means any operation performed in circom has a `modulo altbn_P` applied to it by default. Note that the prime `p` used by ED25519 is different and greater in value than `altbn_P`
-
-Hence, we must define an approach that allows us to perform ed25519 operations while keeping all numbers within the circom prime field.
-
-One way to solve this problem is to represent all numbers as an array of base2 numbers (binary). This would make sure that no single element exceeds `altbn_P` but the entire array could represent larger numbers. In fact we can choose any base `B` such that `B < altbn_P`
-
-We have chosen to use base `2^51`.
-
-### Step3: Defining adder, multiplier, and modulus in base 2^51
+In our circom implementation, rather than using cartesian coordinates, we use the radix format as defined in the reference implementation (given [here](https://datatracker.ietf.org/doc/html/rfc8032#page-20)). This changes how the polynomials look, but the core logic is the same. Please see the code [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/point-addition.circom).
 
 \<add here>
 

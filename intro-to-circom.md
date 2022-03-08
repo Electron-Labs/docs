@@ -114,5 +114,22 @@ The `<--` operator is basically Circom's attempt at making the developer's life 
 
 If you are maths savvy, you might have noted that the constraint `x === q*10 + y` is not mathematically complete. We must also apply the condition that `y<10`. We will discuss how to set this condition later when we look at the "less than" circuit.
 
+\<more coming soon>
 
 
+
+\--- Author's Document Notes ---
+
+Note that, the entire circom could be replaced by a signals.json file and another constraints.json file that specifies constraints. One would have to perform a lot of maths in python to make it work though.
+
+#### Example3: Explaination of multiplier
+
+if else not allowed
+
+#### How to Acess witness.json
+
+#### Important Circuits
+
+Multiplexers
+
+Less-than circuit
