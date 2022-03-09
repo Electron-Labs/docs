@@ -8,6 +8,8 @@ This section assumes that you have completed the Circom tutorial for the multipl
 
 Let us now discuss how to make proper use of Circom.
 
+#### Dealing with Constraints
+
 Let's start with something simple/trivial. Say we want to prove the polynomial `x^2 + x + 2 = y` for a given `(x,y)`. In circom, we write this as:-
 
 ```
@@ -74,9 +76,9 @@ t2 = t1*x
 t1 + t2 + 1 = y
 $$
 
+#### How use the modulo operator (%) in Circom?
 
-
-Now, the underlying cryptography restricts us to just `*` and `+` operators. But we obviously want to use all operators. So how can we prove the equation `y = x%10`?
+The underlying cryptography restricts us to just `*` and `+` operators. But we obviously want to use all operators. So how can we prove the equation `y = x%10`?
 
 ```
 signal input x;
@@ -112,24 +114,33 @@ What just happened here? The `<--` is basically Circom's assignment operator. Pl
 
 The `<--` operator is basically Circom's attempt at making the developer's life easier.
 
-If you are maths savvy, you might have noted that the constraint `x === q*10 + y` is not mathematically complete. We must also apply the condition that `y<10`. We will discuss how to set this condition later when we look at the "less than" circuit.
+If you are maths savvy, you might have noted that the constraint `x === q*10 + y` is not mathematically complete. We must also apply the condition that `y<10`. We will now discuss how to set this condition through the use of the "less than" circuit.
 
-\<more coming soon>
+```
+template LessThan(n) {
+    assert(n <= 252); //this is required since the altbn prime is upto 252 bits
+    
+    signal input in[2]; //in[0] & in[1] are integers of upto n bits  
+    signal output out;
 
+    component n2b = Num2Bits(n+1);
+    //Num2Bits takes an integer input and returns it's bitfied array
+    //the argument n+1 is the max size of the integer input
 
+    n2b.in <== in[0]+ (1<<n) - in[1];
 
-\--- Author's Document Notes ---
+    out <== 1-n2b.out[n];
+}
+```
 
-Note that, the entire circom could be replaced by a signals.json file and another constraints.json file that specifies constraints. One would have to perform a lot of maths in python to make it work though.
+You might need pen and paper and need to do a bit of maths to understand how this circuit works. But the basic idea is that you can use the constraints model to describe general computations. One needs to realize that the logic required to describe something in circom is written in a very different way than a typical programming language.
 
-#### Example3: Explaination of multiplier
+As next steps, it might be worthwhile to check out the `Num2Bits` template mentioned above, given [here](https://github.com/iden3/circomlib/blob/master/circuits/bitify.circom#L25). There is a lot of neat stuff in [circomlib](https://github.com/iden3/circomlib/tree/master/circuits), circuits that help you achieve general computations. We recommend checking out multiplexers and comparators.
 
-if else not allowed
+You can also check out this [base2^51 multiplier](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/binmulfast.circom#L87). It takes two numbers, represented as arrays of base2^51 numbers, and multiplies them together, and returns an array of base2^51 numbers.
 
-#### How to Acess witness.json
+Circom does NOT allow you to apply if/else conditionals on signals. Nor are you allowed to use signals as the termination condition for loops. You can use only compilation time constants (variables in circom) for these, such as `n` in the `lessthan` template. This is because otherwise, it would make the constraints dependent on the signals, effectively meaning that the polynomials being proven are dependent on the variables themselves. This is not possible with the current construction of the underlying cryptography. So far in our work, this does not seem to matter.
 
-#### Important Circuits
+One more thing, when working with Circom, sometimes it's very useful to be able to see what's inside your witness file. Use the command `snarkjs wej witness.wtns witness.json`. This command runs on your `witness.wtns` file and gives you JSON.
 
-Multiplexers
-
-Less-than circuit
+One last thought => in theory, the entire Circom language could be replaced by a signals.json file and another constraints.json file that specifies constraints. If you can make constraints.json compatible with Circom's R1CS file, then one could use snarkJS too with this.
