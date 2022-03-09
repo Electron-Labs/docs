@@ -135,9 +135,11 @@ template LessThan(n) {
 
 You might need pen and paper and need to do a bit of maths to understand how this circuit works. But the basic idea is that you can use the constraints model to describe general computations. One needs to realize that the logic required to describe something in circom is written in a very different way than a typical programming language.
 
+#### Conclusion
+
 As next steps, it might be worthwhile to check out the `Num2Bits` template mentioned above, given [here](https://github.com/iden3/circomlib/blob/master/circuits/bitify.circom#L25). There is a lot of neat stuff in [circomlib](https://github.com/iden3/circomlib/tree/master/circuits), circuits that help you achieve general computations. We recommend checking out multiplexers and comparators.
 
-You can also check out this [base2^51 multiplier](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/binmulfast.circom#L87). It takes two numbers, represented as arrays of base2^51 numbers, and multiplies them together, and returns an array of base2^51 numbers.
+You can also check out this [base2^51 multiplier](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/binmulfast.circom#L87). It takes two numbers, represented as arrays of base2^51 numbers, multiplies them together, and returns an array of base2^51 numbers.
 
 Circom does NOT allow you to apply if/else conditionals on signals. Nor are you allowed to use signals as the termination condition for loops. You can use only compilation time constants (variables in circom) for these, such as `n` in the `lessthan` template. This is because otherwise, it would make the constraints dependent on the signals, effectively meaning that the polynomials being proven are dependent on the variables themselves. This is not possible with the current construction of the underlying cryptography. So far in our work, this does not seem to matter.
 
