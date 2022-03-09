@@ -118,7 +118,7 @@ If you are maths savvy, you might have noted that the constraint `x === q*10 + y
 
 ```
 template LessThan(n) {
-    assert(n <= 252); //this is required since the altbn prime is upto 252 bits
+    assert(n <= 252); //this is required since the altbn prime is upto 254 bits
     
     signal input in[2]; //in[0] & in[1] are integers of upto n bits  
     signal output out;

@@ -26,15 +26,43 @@ Next, we must define addition, multiplication, and modulus operator in base`2^51
 
 ### Step2: Defining adder, multiplier, and modulus in base 2^51
 
-Inputs
+Inputs and outputs to these circuits are arrays where each element of the array is less than `2^51`
 
-a : \[232,232,233,32,3]
+#### Adder
 
-b : \[342,313,114,31,113]
+Find the implementation of base2^51 Adder [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/chunkedadd.circom#L52)
 
-\<add here>
+#### Multiplier
 
-### Step3: Making ED25519 Circom-ready
+Find the implementation of base2^51 Multiplier [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/binmulfast.circom#L87). The algorithm is basically standard long multiplication, where the carry is handled in the end.&#x20;
+
+#### Modulus
+
+Find the implementation of base2^51 Modulus [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/modulus.circom#L58). This template takes a base2^51 array as input and applied modulo `p = 2^255 - 19`. In the code, `p` is also represented as base2^51.
+
+We perform modulo in such a way that long division is avoided. The algorithm is as follows -&#x20;
+
+```
+p = 2^255 - 19
+define c = 2^255
+
+Given input x s.t max(x) < p^2, calculate x%p
+x%c = r (remainder) (note that max(r) < c)
+x//c = q (quotient) (note that max(q) < p^2/c)
+x = q*c + r
+x = q*(p+19) + r
+x%p = 19q%p + r%p
+
+Now, calculate r%p -
+if (r>=p): r%p = r-p
+if (r<p): r%p = r
+```
+
+In zk-circuits, we can't use if/else conditionals but a multiplexer. The same logic is extended to `19q`.
+
+In the circuit, we apply the above algorithm recursively, and hence `x` can be of arbitrary size.
+
+### Step3: Defining ED25519 Point Addition in Circom
 
 First, we must represent all the ED25519 operations as polynomials so that they can be represented in the R1CS constraint model.
 
@@ -48,7 +76,12 @@ $$
 
 Hence, if three points `(x1, y1)`, `(x2, y2)` and `(x3,y3)` satisfy these two polynomials, we can say that the third point is the sum of the first two points.
 
-In our circom implementation, rather than using cartesian coordinates, we use the radix format as defined in the reference implementation (given [here](https://datatracker.ietf.org/doc/html/rfc8032#page-20)). This changes how the polynomials look, but the core logic is the same. Please see the code [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/point-addition.circom).
+In our circom implementation, rather than using cartesian coordinates, we use the radix format as defined in the reference implementation (given [here](https://datatracker.ietf.org/doc/html/rfc8032#page-20)). This changes the polynomials a bit, but the core logic is the same. Please see the code [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/point-addition.circom).
+
+### Step4: Defining ED25519 Scalar Multiplication in Circom
 
 \<add here>
 
+### Step5: Defnining Full Signature Verification in Circom
+
+\<add here>
