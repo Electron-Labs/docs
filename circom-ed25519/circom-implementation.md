@@ -18,7 +18,7 @@ Note that the prime `p` used by ED25519 is different and greater in value than `
 
 One way to solve this problem is to represent all numbers as an array of base2 numbers (binary). This would make sure that no single element exceeds `altbn_P` but the entire array could represent larger numbers. In fact, we can choose any base `b` such that `b < altbn_P`
 
-Max value of any number in ED25519 is `p`and it can be represented in a max of 255 bits. In base`2^51`, we need a max of 5 elements to represent all numbers. The number of constraints is the same when multiplying `1`\*`1` or `2^51`\*`2^51`. Hence, it makes sense to use the largest base possible.
+Max value of any number in ED25519 is `p`and it can be represented in a max of 255 bits. In base`2^51`, we need a max of 5 elements to represent all ed25519 numbers. The number of constraints is the same when multiplying `1`\*`1` or `2^51`\*`2^51`. Hence, it makes sense to use the largest base possible.
 
 We have chosen to use base `2^51`. (although base`2^85` is even better). Note that `2^51 < altbn_P` which is necessary.
 
@@ -56,11 +56,11 @@ x%p = 19q%p + r%p
 Now, calculate r%p -
 if (r>=p): r%p = r-p
 if (r<p): r%p = r
+
+The same logic is extended to calculate 19q
 ```
 
-In zk-circuits, we can't use if/else conditionals but a multiplexer. The same logic is extended to `19q`.
-
-In the circuit, we apply the above algorithm recursively, and hence `x` can be of arbitrary size.
+In the circuit, we can't use if/else conditionals but a multiplexer. In the circuit, we apply the above algorithm recursively, and hence `x` can be of arbitrary size.
 
 ### Step3: Defining ED25519 Point Addition in Circom
 
@@ -82,6 +82,6 @@ In our circom implementation, rather than using cartesian coordinates, we use th
 
 \<add here>
 
-### Step5: Defnining Full Signature Verification in Circom
+### Step5: Defining Full Signature Verification in Circom
 
 \<add here>
