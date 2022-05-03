@@ -14,7 +14,7 @@ All benchmarks were run on a 16-core 3.0GHz, 32G RAM machine (AWS c5a.4xlarge in
 
 |                                      | verify.circom |
 | ------------------------------------ | ------------- |
-| Constraints                          | 2564061       |
+| Constraints                          | 2,564,061     |
 | Circuit compilation                  | 72s           |
 | Witness generation                   | 6s            |
 | Trusted setup phase 2 key generation | 841s          |
