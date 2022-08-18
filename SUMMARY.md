@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Welcome to Electron Labs](README.md)
-* [ZK for Beginners](zk-for-beginners.md)
-* [Intro to Circom](intro-to-circom.md)
 
 ## Circom ED25519
 
@@ -11,3 +9,12 @@
 * [Circom Implementation](circom-ed25519/circom-implementation.md)
 * [Batch of Signatures](circom-ed25519/batch-of-signatures.md)
 * [How to Integrate in your project?](circom-ed25519/how-to-integrate-in-your-project.md)
+
+## LEARNING RESOURCES
+
+* [ZK for Beginners](learning-resources/zk-for-beginners.md)
+* [Intro to Circom](learning-resources/intro-to-circom.md)
+
+## Electron Protocol
+
+* [Introduction](electron-protocol/introduction.md)
