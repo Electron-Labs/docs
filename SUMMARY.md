@@ -2,6 +2,10 @@
 
 * [Welcome to Electron Labs](README.md)
 
+## Electron Protocol
+
+* [Introduction](electron-protocol/introduction.md)
+
 ## Circom ED25519
 
 * [Overview](circom-ed25519/overview.md)
@@ -12,9 +16,5 @@
 
 ## LEARNING RESOURCES
 
-* [ZK for Beginners](learning-resources/zk-for-beginners.md)
-* [Intro to Circom](learning-resources/intro-to-circom.md)
-
-## Electron Protocol
-
-* [Introduction](electron-protocol/introduction.md)
+* [ZK for Beginners](zk-for-beginners.md)
+* [Intro to Circom](intro-to-circom.md)
