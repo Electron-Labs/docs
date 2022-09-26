@@ -16,4 +16,4 @@ In the privacy setting, we want the on-chain state and transactions to be encryp
 
 ![](<../.gitbook/assets/image (1).png>)
 
-Let's try to develop a "blackbox" understanding of ZKPs. By blackbox we mean that we will learn the interface of ZKP's, so that we may apply them in the applications we will build.
+Let's try to develop a "blackbox" understanding of ZKPs.

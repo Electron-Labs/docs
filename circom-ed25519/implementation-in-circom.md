@@ -1,12 +1,8 @@
----
-description: Zk-proof of a single ED25519 signature
----
+# Implementation in Circom
 
-# Circom Implementation
+We will now discuss how we can define the Ed25519 maths in the R1CS model, by using Circom. We will then use SnarkJS to generate zk-proofs of Ed25519 signatures. This section assumes a working knowledge of zk-snarks and Circom/SnarkJS.
 
-We will now discuss how we can define the ED25519 maths in the R1CS model, by using Circom. We will then use snarkJS to generate zk-proofs of ED25519 signatures. This section assumes a working knowledge of zk-snarks and Circom/snarkJS.
-
-### Step1: Defining ED25519 prime field inside the altbn prime field
+### Step 1: Define representation in large numbers
 
 Both Circom/zk-snarks and ED25519 are defined under a finite field. This means all math operations are performed under modulo a prime number.
 
