@@ -1,6 +1,11 @@
 # Table of contents
 
 * [Electron Labs](README.md)
+* [Page 1](page-1.md)
+
+## Security Model
+
+* [Page 2](security-model/page-2.md)
 
 ## Circom ED25519
 
