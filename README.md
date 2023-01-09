@@ -1,3 +1,3 @@
-# Welcome to Electron Labs
+# Electron Labs
 
-Making ZK-tech ready for mass adoption. Building a Privacy zkVM for PoS blockchains.
+Building world's first decentralized cross-chain protocol powered by on-chain Light Clients and Zero-Knowledge Proofs.
