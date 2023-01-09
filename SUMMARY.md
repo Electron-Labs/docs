@@ -2,17 +2,6 @@
 
 * [Electron Labs](README.md)
 
-## Protocol Docs
-
-* [Introduction](protocol-docs/introduction.md)
-* [Intro to Zero-Knowledge Proofs for Developers](protocol-docs/intro-to-zero-knowledge-proofs-for-developers.md)
-* [Protocol Design](protocol-docs/protocol-design.md)
-* [Building the right Mental Model for Circuit Programming](protocol-docs/building-the-right-mental-model-for-circuit-programming.md)
-* [Use cases](protocol-docs/use-cases/README.md)
-  * [Prove Membership of Bored Ape Yatch Club](protocol-docs/use-cases/prove-membership-of-bored-ape-yatch-club.md)
-  * [Battleship Game](protocol-docs/use-cases/battleship-game.md)
-  * [Instant Messenger](protocol-docs/use-cases/instant-messenger.md)
-
 ## Circom ED25519
 
 * [Overview](circom-ed25519/overview.md)
