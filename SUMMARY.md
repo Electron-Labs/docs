@@ -19,8 +19,7 @@
 * [Maths of ED25519](circom-ed25519/maths-of-ed25519.md)
 * [Finite fields with large primes](circom-ed25519/finite-fields-with-large-primes.md)
 * [Implementation in Circom](circom-ed25519/implementation-in-circom.md)
-* [Batch of Signatures](circom-ed25519/batch-of-signatures.md)
-* [Performance Metrics](circom-ed25519/performance-metrics.md)
+* [Performance Metrics](circom-ed25519/how-to-integrate-in-your-project.md)
 
 ## LEARNING RESOURCES
 
