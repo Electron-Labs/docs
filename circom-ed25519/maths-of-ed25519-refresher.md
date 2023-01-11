@@ -1,4 +1,4 @@
-# Maths of ED25519
+# Maths of ED25519 (Refresher)
 
 ED25519 signature uses a curve and involves performing operations on this curve. Let's dive deeper.
 
@@ -85,4 +85,3 @@ In step one, you must be wondering how can we use `pubKey` as an input to SHA512
 {% embed url="https://cryptobook.nakov.com/digital-signatures/eddsa-and-ed25519#eddsa-sign" %}
 
 [https://datatracker.ietf.org/doc/html/rfc8032](https://datatracker.ietf.org/doc/html/rfc8032)
-
