@@ -22,4 +22,6 @@ The easiest approach is to represent all numbers in binary format, with each sig
 
 We can represent numbers in the same manner a lot of BigInteger libraries do, by fitting smaller chunks inside the largest possible native element and using an array of such chunks to form larger numbers. We can fit at max `d = p - 1` in a single signal/variable. Instead of base 2 (binary), we can let each signal represent a "digit" up to this number `d`. In other words, a number system with base `d`. Now the information captured by each signal can be maximized, reducing the the required computation for basic arithmetic operations compared to a binary representation.
 
+> 📘 Based Used
+>
 > The base we used in our implementation is 2^85, which is much smaller than the maximum base that we can use. There's a speciifc reason for this, related to our implemnetation of performing modulus on our representation of large numbers. This is discussed in later sections.
