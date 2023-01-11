@@ -53,27 +53,3 @@ Apply this algorithm recursively to calculate `19q % p`. In the circuit, we appl
 
 
 
-> #### &#x20;
-
-
-
-
-
-
-
-
-
-de
-
-
-
-d
-
-ewq
-
-d
-
-$$
-f(x) = x * e^{2 pi i \xi x}
-$$
-
