@@ -2,14 +2,14 @@
 
 * [Electron Labs](README.md)
 
-## Security Model
-
-* [Overview](security-model/overview.md)
-
 ## Protocol Design
 
 * [High Level Design](protocol-design/high-level-design.md)
 * [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
+
+## Security Model
+
+* [Overview](security-model/overview.md)
 
 ## Circom ED25519
 
