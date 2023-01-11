@@ -12,7 +12,7 @@ To define all relevant arithmetic operations over the fintie field, we need to i
 
 #### Implementation
 
-Let the prime `p` for the curve be defined as p = 2^255 - 19. Given input `x`, we need to calculate `x % p`
+Let the prime `p` for the curve be defined as p = 2\<sup>255\</sup> - 19. Given input `x`, we need to calculate `x % p`
 
 We define `c = 2^255`.
 
