@@ -8,6 +8,7 @@
 
 ## Protocol Design
 
+* [High Level Design](protocol-design/high-level-design.md)
 * [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
 
 ## Circom ED25519
