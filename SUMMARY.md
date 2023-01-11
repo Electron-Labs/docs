@@ -6,6 +6,10 @@
 
 * [Overview](security-model/overview.md)
 
+## Protocol Design
+
+* [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
+
 ## Circom ED25519
 
 * [Overview](circom-ed25519/overview.md)
