@@ -42,10 +42,16 @@ Hence, if three points `(x1, y1)`, `(x2, y2)` and `(x3,y3)` satisfy these two po
 
 In our circom implementation, rather than using cartesian coordinates, we use the radix format as defined in the reference implementation (given [here](https://datatracker.ietf.org/doc/html/rfc8032#page-20)). This changes the polynomials a bit, but the core logic is the same. Please see the code [here](https://github.com/Electron-Labs/circom-ed25519/blob/master/circuits/point-addition.circom).
 
-### Step4: Defining ED25519 Scalar Multiplication in Circom
+### Step 4: Defining Ed25519 Scalar Multiplication in Circom
 
-\<add here>
+Find the implementation of scalar multiplication [here](https://github.com/Electron-Labs/ed25519-circom/blob/master/circuits/scalarmul.circom)
 
-### Step5: Defining Full Signature Verification in Circom
+### Step 5: Defining Full Signature Verification in Circom
 
-\<add here>
+Find the implementation of a single signature verification [here](https://github.com/Electron-Labs/ed25519-circom/blob/master/circuits/verify.circom)
+
+### Step 5: Defining Batched (Multi) Signature Verification in Circom
+
+Find the implementation of a batch signature verification [here](https://github.com/Electron-Labs/ed25519-circom/blob/master/circuits/batchverify.circom)
+
+###
