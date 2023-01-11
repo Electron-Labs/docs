@@ -6,3 +6,5 @@ We have developed a library that enables creating a zk-snark proof of ED25519 si
 
 The code can be found [here](https://github.com/Electron-Labs/circom-binary-ops). See the following sections to see the underlying details of how it works.
 
+Our product is built on Circom and we use snarkJS and Rapidsnark for proof generation.
+
