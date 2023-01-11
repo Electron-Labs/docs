@@ -5,6 +5,7 @@
 ## Protocol Design
 
 * [High Level Design](protocol-design/high-level-design.md)
+* [Transaction Lifecycle](protocol-design/transaction-lifecycle.md)
 * [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
 
 ## Security Model
