@@ -20,7 +20,7 @@
 * [Finite fields with large primes](circom-ed25519/finite-fields-with-large-primes.md)
 * [Implementation in Circom](circom-ed25519/implementation-in-circom.md)
 * [Batch of Signatures](circom-ed25519/batch-of-signatures.md)
-* [How to Integrate in your project?](circom-ed25519/how-to-integrate-in-your-project.md)
+* [Performance Metrics](circom-ed25519/performance-metrics.md)
 
 ## LEARNING RESOURCES
 

@@ -1,16 +1,8 @@
----
-description: >-
-  Simple and easy to use smart contract based SDK to use zk-ed25519 in your
-  project
----
-
-# How to Integrate in your project?
-
-Designed for rust L1's and Dapps to bring zk to their blockchain. Deploy zk-rollups, built ultralight clients, secure cross-chain bridges, enable privacy...
+# Performance Metrics
 
 ### Benchmarks
 
-All benchmarks were run on a 16-core 3.0GHz, 32G RAM machine (AWS c5a.4xlarge instance).
+All metrics were measured on a 16-core 3.0GHz, 32G RAM machine (AWS c5a.4xlarge instance).
 
 |                                      | Single ED25519 Signature |
 | ------------------------------------ | ------------------------ |
@@ -21,7 +13,16 @@ All benchmarks were run on a 16-core 3.0GHz, 32G RAM machine (AWS c5a.4xlarge in
 | Trusted setup phase 2 contribution   | 1040s                    |
 | Proving key size                     | 1.6G                     |
 | Proving time (rapidsnark)            | 6s                       |
-| Proof verification time              | 1s                       |
+| Geth Proof verification time         | 10 ms                    |
+| Proof verification Gas Cost on EVM   | \~227,000                |
+
+
+
+
+
+
+
+
 
 
 
