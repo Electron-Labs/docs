@@ -12,15 +12,20 @@ To define all relevant arithmetic operations over the fintie field, we need to i
 
 #### Implementation
 
-Let the prime `p` for the curve be defined as p = 2255 - 19. Given input `x`, we need to calculate `x % p`
+Let the prime `p` for the curve be defined as p = 2^255 - 19. Given input `x`, we need to calculate `x % p`
 
 We define `c = 2^255`.
 
 Now,\
 `r = x % 2^255`
 
-> Note that r <  Also, r is simply the least significant 255 bits of x
+> Note that `r` <  2^255. Also, `r` is simply the least significant 255 bits of `x`
+
+`q = x // 2^255`
+
+> #### &#x20;
 
 $$
 f(x) = x * e^{2 pi i \xi x}
 $$
+
