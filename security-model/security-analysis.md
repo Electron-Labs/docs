@@ -60,7 +60,7 @@ Hence, we can consider the bridge to be secure as long as the $ value of the inc
 
 
 
-\<add content explaining the need to multiple relayers in the network>
+\<add content explaining the need to have multiple relayers in the network>
 
 
 
