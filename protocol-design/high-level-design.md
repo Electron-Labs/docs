@@ -4,7 +4,7 @@ In the traditional bridge design, the bridge is secured by operators of a multi-
 
 Electron Protocol follows a security model where _no such centralized multi-sig operators are needed_.
 
-So, how do we achieve this?
+### So, how do we achieve this?
 
 In order to check the validity of transactions, we must a submit a proof of transaction validity. This means we must prove that the given transaction was included in the blockchain (Source Chain). This is called Proof of Consensus.
 
@@ -14,9 +14,7 @@ Blockchains provide a simple protocol called Light Client. A Light Client is a s
 
 Hence, we will basically implement the Light Client of Source Chain inside the smart contract of Destination Chain. This means that if the relayer submits any spurious transactions, the light node can simply detect it and reject the transaction.
 
-<figure><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/857db684-2146-43b2-9c4e-afda0072de57/Screenshot_2023-01-09_at_9.52.53_PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&#x26;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&#x26;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230111%2Fus-west-2%2Fs3%2Faws4_request&#x26;X-Amz-Date=20230111T075420Z&#x26;X-Amz-Expires=86400&#x26;X-Amz-Signature=a77ce3477ecfa6863bc9ed80a8091e438d5f3cf92b14372a3b31eb6188c287f4&#x26;X-Amz-SignedHeaders=host&#x26;response-content-disposition=filename%3D%22Screenshot%25202023-01-09%2520at%25209.52.53%2520PM.png%22&#x26;x-id=GetObject" alt=""><figcaption></figcaption></figure>
-
-![Screenshot 2023-01-09 at 9.52.53 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/857db684-2146-43b2-9c4e-afda0072de57/Screenshot\_2023-01-09\_at\_9.52.53\_PM.png)
+<figure><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/857db684-2146-43b2-9c4e-afda0072de57/Screenshot_2023-01-09_at_9.52.53_PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&#x26;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&#x26;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230114%2Fus-west-2%2Fs3%2Faws4_request&#x26;X-Amz-Date=20230114T121332Z&#x26;X-Amz-Expires=86400&#x26;X-Amz-Signature=b0dce8c382604d06e5d785d5964519655487dc8f3d95770434cd458955279745&#x26;X-Amz-SignedHeaders=host&#x26;response-content-disposition=filename%3D%22Screenshot%25202023-01-09%2520at%25209.52.53%2520PM.png%22&#x26;x-id=GetObject" alt=""><figcaption></figcaption></figure>
 
 However, when connecting to expensive blockchains such as Ethereum, executing a Light Node code inside a solidity smart contract is not feasible due to very high gas requirement.
 
@@ -26,7 +24,7 @@ So how do we solve this?
 
 Rather than submitting the Light Client Proofs directly, we instead construct a zk-proof of validity and submit that on-chain instead. The cost of verifying zk-proofs of Ethereum is order of magnitude cheaper than verifying the light client directly
 
-<figure><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b4ce92ba-c454-497c-bfd6-cbdf11126bc6/Screenshot_2023-01-09_at_10.57.36_PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&#x26;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&#x26;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230111%2Fus-west-2%2Fs3%2Faws4_request&#x26;X-Amz-Date=20230111T075522Z&#x26;X-Amz-Expires=86400&#x26;X-Amz-Signature=3afee38613cabe993c4b0cce34761d9968377c6e43049fbf731533f174ab5c1c&#x26;X-Amz-SignedHeaders=host&#x26;response-content-disposition=filename%3D%22Screenshot%25202023-01-09%2520at%252010.57.36%2520PM.png%22&#x26;x-id=GetObject" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 **Does zk-proof generation introduce any new trust assumptions?**
 
