@@ -11,6 +11,7 @@
 ## Security Model
 
 * [Overview](security-model/overview.md)
+* [Security Analysis](security-model/security-analysis.md)
 
 ## Circom ED25519
 
