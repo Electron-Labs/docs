@@ -1,8 +1,6 @@
 # Introduction
 
-Electron Protocol is a cross-chain protocol secured by on-chain light clients.
-
-We are building world's first decentralized cross-chain protocol powered by on-chain Light Clients and Zero-Knowledge Proofs.
+Building world's first decentralized cross-chain protocol powered by on-chain Light Clients and Zero-Knowledge Proofs.
 
 All existing bridges in the market rely on a centralized set of "operators" that are responsible for maintaining the security of bridges. These operators essentially operate a multi-sig that is responsible for signing off on the transaction to ensure their validity.
 
