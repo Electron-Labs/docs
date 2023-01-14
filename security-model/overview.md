@@ -1,9 +1,5 @@
 # Overview
 
-Electron Protocol is a cross-chain protocol secured by on-chain light clients. In this section, let us try to understand why Electron Protocol is the&#x20;
-
-
-
 Before we dive into why Electron Protocol is "decentralized/trustless". Let us define what we mean by a "trust-less" bridge.
 
 **What do we mean by trust-less bridging?**
