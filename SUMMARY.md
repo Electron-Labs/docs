@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Electron Labs](README.md)
+* [Introduction](README.md)
 
 ## Protocol Design
 
