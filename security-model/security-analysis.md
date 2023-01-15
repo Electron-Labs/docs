@@ -48,7 +48,7 @@ _We consider this Security Level 1: i.e. the relayer and 67% validators must col
 
 So how can we make sure we don’t have to trust that validator’s are not colluding together? Let’s talk about Security Level 2.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 In order to prevent chain forking, PoS systems impose slashing on double signing. This means that if validators sign two different blocks at the same height, they will get slashed. How does slashing actually happen? The entity (could be anyone) who detects the doubly signed block can submit this block to the canonical chain, and this will trigger the slashing module. Typically there are rewards to reporting such malicious behaviour.
 
