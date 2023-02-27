@@ -1,6 +1,6 @@
 # High Level Design
 
-In the traditional bridge design, the bridge is secured by operators of a multi-sig that sign off on the transactions. However, this means that the bridge security and asset custody is completely in the hands of the multi-sig operators.
+In the traditional bridge design, the bridge is secured by operators of a multi-sig that sign off on the transactions. However, this puts the bridge security and asset custody _completely_ in the hands of the bridge operators.
 
 Electron Protocol follows a security model where _no such centralized multi-sig operators are needed_.
 
