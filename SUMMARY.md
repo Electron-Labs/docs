@@ -27,3 +27,7 @@
 
 * [ZK Proofs for Beginners](learning-resources/zk-proofs-for-beginners.md)
 * [Intro to Circom](intro-to-circom.md)
+
+## Group 1
+
+* [Developer Docs](group-1/developer-docs.md)
