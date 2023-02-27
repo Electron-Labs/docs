@@ -28,6 +28,8 @@
 * [ZK Proofs for Beginners](learning-resources/zk-proofs-for-beginners.md)
 * [Intro to Circom](intro-to-circom.md)
 
-## Group 1
+## Developer Docs
 
-* [Developer Docs](group-1/developer-docs.md)
+* [Overview](developer-docs/overview.md)
+* [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
+* [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
