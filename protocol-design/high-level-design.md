@@ -14,7 +14,9 @@ Blockchains provide a simple protocol called Light Node. A Light Node is "lighte
 
 Hence, we basically implement the Light Node of Source Chain as a smart contract on the Destination Chain. This means that if the relayer submits any spurious transactions, the light node can simply detect it and reject the transaction.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-02-28 at 12.06.24 AM.png" alt=""><figcaption></figcaption></figure>
 
 However, when connecting to expensive blockchains such as Ethereum, executing a Light Node code inside a solidity smart contract is not feasible due to very high gas requirement.
 
@@ -24,7 +26,7 @@ So how do we solve this?
 
 Rather than submitting the Light Client Proofs directly, we instead construct a zk-proof of validity and submit that on-chain instead. The cost of verifying zk-proofs of Ethereum is order of magnitude cheaper than verifying the light client directly.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-02-28 at 12.07.30 AM.png" alt=""><figcaption></figcaption></figure>
 
 **Does zk-proof generation introduce any new trust assumptions?**
 
