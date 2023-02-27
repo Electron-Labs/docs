@@ -1,6 +1,6 @@
 # NEAR to Ethereum
 
-## NEAR TO ETHEREUM TRANSACTION/LC FLOW:
+### NEAR To Ethereum Transaction/Light Client Flow:
 
 ### NEAR:
 
