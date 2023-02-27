@@ -9,11 +9,11 @@
 * [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
 * [Decentralizing the relayer network](protocol-design/decentralizing-the-relayer-network.md)
 
-## Developer Docs
+## Transaction Flows
 
-* [Overview](developer-docs/overview.md)
-* [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
-* [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
+* [Overview](transaction-flows/overview.md)
+* [Ethereum To NEAR](transaction-flows/ethereum-to-near.md)
+* [NEAR to Ethereum](transaction-flows/near-to-ethereum.md)
 
 ## Security Model
 
