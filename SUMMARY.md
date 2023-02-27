@@ -9,6 +9,12 @@
 * [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
 * [Decentralizing the relayer network](protocol-design/decentralizing-the-relayer-network.md)
 
+## Developer Docs
+
+* [Overview](developer-docs/overview.md)
+* [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
+* [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
+
 ## Security Model
 
 * [Overview](security-model/overview.md)
@@ -27,9 +33,3 @@
 
 * [ZK Proofs for Beginners](learning-resources/zk-proofs-for-beginners.md)
 * [Intro to Circom](intro-to-circom.md)
-
-## Developer Docs
-
-* [Overview](developer-docs/overview.md)
-* [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
-* [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
