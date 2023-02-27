@@ -6,11 +6,11 @@ This means, that the destination chain could recieve transactions is a different
 
 So how do we do that with Electron Protocol?
 
-### Problem explaination-&#x20;
+Problem explaination-&#x20;
 
 {% embed url="https://youtu.be/l8j9pD6FUeQ" %}
 
-### Solution -&#x20;
+Solution -&#x20;
 
 {% embed url="https://youtu.be/5XIX1Qom06c" %}
 
