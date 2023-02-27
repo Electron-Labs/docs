@@ -1,6 +1,6 @@
 # Ethereum To NEAR
 
-## **Ethereum To Near :**
+The relayer must do things - relay the Ethereum Light Client Headers to NEAR, and relay the transaction from Eth to NEAR. Lets us look at each of them.
 
 ### Ethereum To NEAR Light Client Flow :
 
