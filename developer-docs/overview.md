@@ -1,8 +1,10 @@
 # Overview
 
-In overview zkBridge currently works on Light Client Model with the small addition of signature verifications of the respectiv light client headers using zero knowledge proofs.
+Our zkBridge currently works on Light Client Model. Additionaly, we add a small step where signature verifications of the respective light client headers takes placen using zero knowledge proofs.
 
-Transaction Flows:
+There are two Transaction Flows:
 
 1. Ethereum to Near
 2. Near to Ethereum
+
+Let us look at each one of them
