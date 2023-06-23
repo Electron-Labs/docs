@@ -5,15 +5,18 @@
 ## Protocol Design
 
 * [High Level Design](protocol-design/high-level-design.md)
-* [Transaction Lifecycle](protocol-design/transaction-lifecycle.md)
-* [How we ensure Sequence of Transactions is maintained](protocol-design/how-we-ensure-sequence-of-transactions-is-maintained.md)
-* [Decentralizing the relayer network](protocol-design/decentralizing-the-relayer-network.md)
 
 ## Transaction Flows
 
 * [Overview](developer-docs/overview.md)
 * [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
 * [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
+
+## Miscellaneous
+
+* [User flows and types of tokens user gets at each step](miscellaneous/user-flows-and-types-of-tokens-user-gets-at-each-step.md)
+* [How we ensure Sequence of Transactions is maintained](miscellaneous/how-we-ensure-sequence-of-transactions-is-maintained.md)
+* [Decentralizing the relayer network](miscellaneous/decentralizing-the-relayer-network.md)
 
 ## Security Model
 
