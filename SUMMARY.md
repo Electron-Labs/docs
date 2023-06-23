@@ -17,6 +17,7 @@
 * [User flows and types of tokens user gets at each step](miscellaneous/user-flows-and-types-of-tokens-user-gets-at-each-step.md)
 * [How we ensure Sequence of Transactions is maintained](miscellaneous/how-we-ensure-sequence-of-transactions-is-maintained.md)
 * [Decentralizing the relayer network](miscellaneous/decentralizing-the-relayer-network.md)
+* [Liquidity Module](miscellaneous/liquidity-module.md)
 
 ## Security Model
 
