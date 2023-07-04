@@ -5,7 +5,7 @@
 ## Protocol Design
 
 * [High Level Design](protocol-design/high-level-design.md)
-* [Flow of Funds](protocol-design/flow-of-funds.md)
+* [User Flows and Flow of Funds](protocol-design/user-flows-and-flow-of-funds.md)
 
 ## Transaction Flows
 
@@ -15,7 +15,6 @@
 
 ## Miscellaneous
 
-* [User Flows and Flow of Funds](miscellaneous/user-flows-and-flow-of-funds.md)
 * [How we ensure Sequence of Transactions is maintained](miscellaneous/how-we-ensure-sequence-of-transactions-is-maintained.md)
 * [Decentralizing the relayer network](miscellaneous/decentralizing-the-relayer-network.md)
 * [Liquidity Module](miscellaneous/liquidity-module.md)
