@@ -24,29 +24,44 @@ Detailed design of our Liquidity module is given below.
 
 **Let us now try to understand how much tokens an LP will get when they add liquidity to a pre-existing pool.**
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 ### Adding Liquidity
 
-Consider the scenario when a new LP is adding new stable-coins. LP adds new stable coins $$V_1$$and gets LP tokens in return as $$T_1$$
+Consider the scenario when a new LP is adding new stable-coins. LP adds new stable coins $$V$$and gets LP tokens in return as $$T$$
 
-Just _before_ the LP adds the liquidity, the supply of stable coin supply is = $$TVL_1$$ and the total LP coin supply is $$S_1$$
+Just _before_ the LP adds the liquidity, the supply of stable coin supply is = $$TVL_i$$ and the total LP coin supply is $$S_i$$
 
-Just _after_ the LP adds the liquidity, the supply of stable coin supply is = $$TVL_2$$ and the total LP coin supply is $$S_2$$
+Just _after_ the LP adds the liquidity, the supply of stable coin supply is = $$TVL_f$$ and the total LP coin supply is $$S_f$$
 
 Hence we can write ⇒
 
-$$S_2 = S_1 + T_1$$
+$$S_f = S_i + T$$
 
-$$TVL_2 = TVL_1 + V_1$$
+$$TVL_f = TVL_i + V$$
 
 Furthermore, the % stakeholding in the LP token of the LP should be the same as the fraction of liquidity that belongs to him.
 
 Hence, we can write ⇒
 
+## $$\frac{T}{S_f}=\frac{V}{TVL_f}$$
 
+## $$\frac{T}{T+S_i}=\frac{V}{TVL_i + V}$$
 
+#### $$T(TVL_i + V) = TV + S_iV$$
 
+## $$T=\frac{V * S_i}{TVL_i}$$
 
+We can hence easily calculate the new tokens that need to be given to the LP when they add liquidity. Please note that new LP are minted and then given to the LP. Hence, the LP token supply is variable.
+
+Let us try to calculate the price of the LP token before and after the liquidity is added.
+
+Price just _before_ liquidity is added = $$P_1$$
+
+Price just _after_ liquidity is added = $$P_2$$
+
+We can calculate $$P_1$$ as ⇒
+
+$$P_i = \fraTVL_i/S_i$$
