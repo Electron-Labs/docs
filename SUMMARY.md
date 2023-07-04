@@ -5,6 +5,7 @@
 ## Protocol Design
 
 * [High Level Design](protocol-design/high-level-design.md)
+* [Flow of Funds](protocol-design/flow-of-funds.md)
 
 ## Transaction Flows
 
