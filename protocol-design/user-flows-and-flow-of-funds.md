@@ -8,6 +8,8 @@ Quick summary of types of tokens -&#x20;
 2. zkUSDC - wrapped asset of Electron zk-bridge (only on NEAR)
 3. USDC.e - native USDC of NEAR
 
+In our bridge, the user gets the native USDC on each chain when they bridge.
+
 ### Ethereum to NEAR
 
 When a user locks USDC on Ethereum side, our bridge mints zkUSDC on NEAR side. zkUSDC is the wrapped asset provided by our bridge.
@@ -25,8 +27,4 @@ When a user want to go from NEAR to Ethereum, they would bring their USDC.e coin
 Then, the user can burn zkUSDC on the bridge, and then the corresponding amount of USDC tokens are unlocked on Ethereum and transferred to the user.
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
 
