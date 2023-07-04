@@ -24,7 +24,7 @@ Detailed design of our Liquidity module is given below.
 
 **Let us now try to understand how much tokens an LP will get when they add liquidity to a pre-existing pool.**
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -58,10 +58,25 @@ We can hence easily calculate the new tokens that need to be given to the LP whe
 
 Let us try to calculate the price of the LP token before and after the liquidity is added.
 
-Price just _before_ liquidity is added = $$P_1$$
+Price just _before_ liquidity is added = $$P_i$$
 
-Price just _after_ liquidity is added = $$P_2$$
+Price just _after_ liquidity is added = $$P_f$$
 
-We can calculate $$P_1$$ as ⇒
+We can calculate $$P_i$$ as ⇒
 
-$$P_i = \fraTVL_i/S_i$$
+## $$P_i = \frac {TVL_i}{S_i}$$
+
+And we can also write $$P_f$$ as ⇒
+
+## $$P_f = \frac {TVL_f}{S_f} = \frac {TVL_i + V}{S_i + T} = \frac {TVL_i}{S_i}$$
+
+Hence we can see that $$P_i == P_f$$
+
+Hence price of the LP token is same before and after liquidity is added.
+
+**As the pool accrues fees, the total liquidity in the pool will increase while LP tokens stay constant. Hence, the LP token will be an interest bearing token.**
+
+Our model also ensures that LP only get the fees for the transactions that happened while the LP had locked the liquidity.
+
+### Removing Liquidity
+
