@@ -6,6 +6,7 @@
 
 * [High Level Design](protocol-design/high-level-design.md)
 * [User Flows and Flow of Funds](protocol-design/user-flows-and-flow-of-funds.md)
+* [LP Module: User Flow and Flow of Funds](protocol-design/lp-module-user-flow-and-flow-of-funds.md)
 
 ## Transaction Flows
 
