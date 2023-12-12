@@ -1,5 +1,12 @@
 # Ethereum To NEAR
 
+There are two Transaction Flows:
+
+1. Ethereum to Near
+2. Near to Ethereum
+
+In this section, we start with Ethereum to NEAR. Let's dive in.
+
 The relayer must do things - relay the Ethereum Light Client Headers to NEAR, and relay the transaction from Eth to NEAR. Lets us look at each of them.
 
 ### Ethereum To NEAR Light Client Flow :

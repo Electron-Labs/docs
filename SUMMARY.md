@@ -7,11 +7,9 @@
 * [Introduction](zk-bridge-protocol-design/introduction.md)
 * [High Level Design](zk-bridge-protocol-design/high-level-design.md)
 * [User Flows and Flow of Funds](zk-bridge-protocol-design/user-flows-and-flow-of-funds.md)
-* [LP Module: User Flow and Flow of Funds](zk-bridge-protocol-design/lp-module-user-flow-and-flow-of-funds.md)
 
 ## Transaction Flows
 
-* [Overview](transaction-flows/overview.md)
 * [Ethereum To NEAR](transaction-flows/ethereum-to-near.md)
 * [NEAR to Ethereum](transaction-flows/near-to-ethereum.md)
 
