@@ -4,8 +4,8 @@
 
 ## ZK-Bridge Protocol Design
 
-* [Introduction](zk-bridge-protocol-design/introduction.md)
 * [High Level Design](zk-bridge-protocol-design/high-level-design.md)
+* [Analysis of Security Model](zk-bridge-protocol-design/analysis-of-security-model.md)
 * [User Flows and Flow of Funds](zk-bridge-protocol-design/user-flows-and-flow-of-funds.md)
 
 ## Transaction Flows
@@ -18,11 +18,6 @@
 * [Liquidity Module](miscellaneous/liquidity-module.md)
 * [How we ensure Sequence of Transactions is maintained](miscellaneous/how-we-ensure-sequence-of-transactions-is-maintained.md)
 * [Decentralizing the relayer network](miscellaneous/decentralizing-the-relayer-network.md)
-
-## Security Model
-
-* [Overview](security-model/overview.md)
-* [Security Analysis](security-model/security-analysis.md)
 
 ## Circom ED25519
 
