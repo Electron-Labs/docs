@@ -16,7 +16,7 @@ Trustless has following components - Security, Permisionless, Censorship resista
 
 
 
-#### We are working on a written document explaining our security model. Meanwhile, here is a video explainer -&#x20;
+**Video explainer -**&#x20;
 
 {% embed url="https://www.youtube.com/watch?v=IRHat-LN_vQ" %}
 
