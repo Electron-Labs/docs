@@ -24,7 +24,7 @@ Detailed design of our Liquidity module is given below.
 
 **Let us now try to understand how much tokens an LP will get when they add liquidity to a pre-existing pool.**
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 ### Adding Liquidity
 

@@ -10,9 +10,9 @@
 
 ## Transaction Flows
 
-* [Overview](developer-docs/overview.md)
-* [Ethereum To NEAR](developer-docs/ethereum-to-near.md)
-* [NEAR to Ethereum](developer-docs/near-to-ethereum.md)
+* [Overview](transaction-flows/overview.md)
+* [Ethereum To NEAR](transaction-flows/ethereum-to-near.md)
+* [NEAR to Ethereum](transaction-flows/near-to-ethereum.md)
 
 ## Miscellaneous
 
@@ -32,9 +32,11 @@
 * [Large numbers in circom](circom-ed25519/large-numbers-in-circom.md)
 * [Finite fields with large primes](circom-ed25519/finite-fields-with-large-primes.md)
 * [Implementation in Circom](circom-ed25519/implementation-in-circom.md)
-* [Performance Metrics](circom-ed25519/how-to-integrate-in-your-project.md)
+* [Performance Metrics](circom-ed25519/performance-metrics.md)
 
 ## LEARNING RESOURCES
 
 * [ZK Proofs for Beginners](learning-resources/zk-proofs-for-beginners.md)
-* [Intro to Circom](intro-to-circom.md)
+* [Intro to Circom](learning-resources/intro-to-circom.md)
+* [Page 1](learning-resources/page-1/README.md)
+  * [Page 2](learning-resources/page-1/page-2.md)
